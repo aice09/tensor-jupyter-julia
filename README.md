@@ -27,14 +27,14 @@ If your tasks involve intensive computations that can benefit from GPU accelerat
 1. Build the custom Docker image:
 
 ```sh
-docker build -t tensorflow-julia .
+docker build -t the-notebook .
 ```
 
 2. Run the custom Docker image:
 
 Default:
 ```sh
-docker run -d --rm -v $(realpath ~/notebooks):/tf/notebooks -p 8888:8888 tensorflow-julia
+docker run -d --rm -v $(realpath ~/notebooks):/tf/notebooks -p 8888:8888 the-notebook
 ```
 
 With reouces allocation
@@ -45,7 +45,7 @@ docker run -d --rm \
   -p 8888:8888 -p 4040:4040 \                 # Expose ports for Jupyter and Spark UI
   --cpus=4 \                                 # Allocate 4 CPU cores
   --memory=8G \                              # Allocate 8GB of RAM
-  tensorflow-julia-r-scala-spark              # Docker image name
+  the-notebook                               # Docker image name
 ```
 
 
